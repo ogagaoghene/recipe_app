@@ -60,3 +60,5 @@ Style/HashTransformValues:
   Enabled: false
 Style/EndOfLine:
   EnforcedStyle: lf
+Style/FrozenStringLiteralComment:
+  Enabled: false
