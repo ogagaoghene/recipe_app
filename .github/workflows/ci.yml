@@ -1,0 +1,66 @@
+name: CI
+on: pull_request
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    services:
+      postgres:
+        image: postgres:11
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_USER: shine
+          POSTGRES_PASSWORD: shine
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+          registry-url: 'https://registry.npmjs.org'
+
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 3.1.x
+      
+      - name: Install dependent libraries
+        run: sudo apt-get install libpq-dev
+
+      - name: Bundle Install
+        run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+
+      - name: Install yarn
+      run: npm install -g yarn
+
+      - name: Get yarn cache dir
+        id: yarn-cache-dir
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Yarn cache
+        id: cache-yarn
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache-dir.outputs.dir }}
+          key: yarn-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Yarn install
+        run: yarn install
+
+      - name: Setup Database
+        run: |
+          cp config/database.yml.github-actions config/database.yml
+          bundle exec rake db:create
+          bundle exec rake db:schema:load
+        env:
+          RAILS_ENV: test
+          POSTGRES_USER: shine
+          POSTGRES_PASSWORD: shine
+
+      - name: Run RSpec
+        run: COVERAGE=true bundle exec rspec  --require rails_helper
+        env:
+          RAILS_ENV: test
+          POSTGRES_USER: shine
+          POSTGRES_PASSWORD: shine
