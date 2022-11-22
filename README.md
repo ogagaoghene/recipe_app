@@ -23,8 +23,8 @@ git clone https://github.com/ogagaoghene/recipe_app
 
 
 ### Run project
-- cd blog_app
-- run rails server
+- cd recipe_app
+- run rails s
 
 
 ## Author
