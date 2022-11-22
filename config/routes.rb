@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'public_recipes/index'
+  get 'general_shopping_list/index'
   devise_scope :users do
     # Redirests signing out users back to sign-in
     get "users", to: "devise/sessions#new"
