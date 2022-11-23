@@ -1,0 +1,30 @@
+<section class="grid__container">
+  <h3 class="text-center"><%= @recipe.name %></h3> 
+  <article class="d-flex flex-column gap-3">
+    <div class="d-flex justify-content-between">
+      <p>
+        <b>Preparation time:</b> 
+        <%= pluralize(@recipe.preparation_time.strftime('%H'), 'hr') %>: 
+        <%= pluralize(@recipe.preparation_time.strftime('%M'), 'min') %>: 
+        <%= pluralize(@recipe.preparation_time.strftime('%S'), 'sec') %>
+      </p>
+      <p><b>Public:</b> <%= @recipe.public %></p>
+    </div>
+    <div>
+      <b>Cooking time:</b> 
+      <%= pluralize(@recipe.cooking_time.strftime('%H'), 'hr') %>: 
+      <%= pluralize(@recipe.cooking_time.strftime('%M'), 'min') %>:
+      <%= pluralize(@recipe.cooking_time.strftime('%S'),'sec') %>
+    </div>
+  <p><%= @recipe.description %></p>
+  </article>
+  <div class="buttons d-flex justify-content-between">
+    <button class="btn btn-primary fw-bold">Generate Shopping List</button>
+    <% if can? :add_ingredient, @recipe %>
+      <button id="add-ingredient" data-toggle="modal" data-target="#add-ingredient-modal" class="btn btn-success fw-bold">Add Ingredient</button>
+    <% end %>
+  </div>
+  <hr>
+  <%= render 'table' %>
+  <%= render 'modal' %>
+</section>

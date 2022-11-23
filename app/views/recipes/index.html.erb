@@ -1,0 +1,17 @@
+<section class="grid__container">
+  <ul class='d-flex flex-column gap-3 p-0'>
+  <%= link_to 'Create recipe', new_recipe_path, class: 'btn btn-success' %>
+    <% @recipes.each do |recipe| %>
+      <li class="card p-3 d-flex gap-3">
+        <div class="row">
+          <div class="col">
+          <h3 class="mb-4"><%= recipe.name %></h3>
+          <%= link_to 'REMOVE', recipe, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+          <%= link_to 'VIEW', recipe, class: 'btn btn-primary' %>
+        </div>
+        <div class="col"><%= recipe.description %></div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</section>

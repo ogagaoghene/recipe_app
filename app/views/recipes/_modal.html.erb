@@ -1,0 +1,28 @@
+<div class="modal fade" id="add-ingredient-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLongTitle">Available foods</h5>
+    </div>
+    <ul class="modal-body list-group">
+      <% @recipe.available_foods.each do |food| %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span><%= food.name %></span>
+          <%= form_with model: @recipe_food, method: :post, scope: :new_recipe_food do |f| %>
+            <%= f.number_field :quantity, placeholder: "Quantity (#{food.measurement_unit})" %>
+            <%= f.number_field :food_id, value: food.id, hidden: true %>
+            <%= f.number_field :recipe_id, value: @recipe.id, hidden: true %>
+            <%= f.submit 'Add ingredient' %>
+          <% end %>
+        </li>
+      <% end %>
+      <% if @recipe.available_foods.empty? %>
+        <li class="list-group-item">No ingredients available</li>
+      <% end %>
+    </ul>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+</div>
