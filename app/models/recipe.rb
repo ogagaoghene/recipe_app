@@ -26,5 +26,4 @@ class Recipe < ApplicationRecord
 
     sum
   end
-
 end

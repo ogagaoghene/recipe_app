@@ -30,5 +30,4 @@ class User < ApplicationRecord
     end
     list
   end
-
 end
