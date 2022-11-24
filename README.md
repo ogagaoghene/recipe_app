@@ -137,12 +137,12 @@ Install this project with:
 
 To run the project, execute the following command:
 
-rails server or rails s
+- rails server or rails s
 
 ### Run tests
 
 To run tests, run the following command:
-bundle exec rspec spec/feature/test_spec.rb
+- bundle exec rspec spec/feature/test_spec.rb
 
 ### Deployment
 
@@ -173,7 +173,9 @@ Heroku
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[Make order]**
+- [ ] **[Place order]**
+- [ ] **[Make payment]**
+- [ ] **[get payment notification message and realtime delivery time ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
