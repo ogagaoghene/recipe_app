@@ -1,5 +1,6 @@
-<section>
+<section class="grid__container">
     <h1 class='text-center fw-bold'>Shopping List</h1>
+    <hr />
     <div class ='d-flex justify-content-between'>
         <span class='fw-bold'>Amount of food items to buy: <%= @general_list.count %></span>
         <span class='fw-bold'>Total value of food needed: $<%= @general_list.reduce(0) { |t, i| t + i[:price] } %></span>

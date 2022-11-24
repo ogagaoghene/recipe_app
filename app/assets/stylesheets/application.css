@@ -7,7 +7,7 @@
 
 body {
   overflow-x: hidden;
-  font-family: 'Varta', sans-serif;
+  font-family: Avenir;
   font-size: 1rem;
 }
 
@@ -104,5 +104,36 @@ body {
   width: 80%;
   margin-left: 50px;
   text-decoration: none;
+}
+
+.nav_li {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 2px;
+}
+
+.nav_ul {
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.logo {
+  border-radius: 2px;
+  padding: 2px;
+  margin: 3px;
+  font-size: 34px;
+  font-family: Avenir;
+  color: #fff;
+  width: 200px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+hr {
+  margin: 0 auto;
+  width: 40%;
 }
 /* stylelint-enable */
