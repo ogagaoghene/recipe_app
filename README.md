@@ -39,7 +39,6 @@
 
 > A Recipe app that keeps track of all your recipes, ingredients, and inventory. You can save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe.
 
-**[Recipe-App]** is a...
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -94,32 +93,40 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
->Install PostgreSQl, Ruby On Rails and Bootstrap
+- Install and setup PostgreSQL
+- Install and setup Ruby On Rails 
+- Setup Bootstrap
 
 To get a local copy up and running, follow these steps.
-git clone https://github.com/ogagaoghene/recipe_app
-cd recipe_app
+- git clone https://github.com/ogagaoghene/recipe_app
+- cd recipe_app
 
 ### Prerequisites
 
 In order to run this project you need:
 
-Ruby on Rails 
-PostgreSQL
-Bootstrap 
+- Ruby on Rails 
+- PostgreSQL
+- Bootstrap 
+- npm
 
 ### Setup
 
 Clone this repository to your desired folder:
-git clone https://github.com/ogagaoghene/recipe_app
-cd recipe_app
+- git clone https://github.com/ogagaoghene/recipe_app
+- cd recipe_app
+- db:migrate 
 
 ### Install
 
 Install this project with:
 
-cd recipe_app
-npm install
+- Ruby on Rails
+- PostgreSQL
+- Bootstrap
+- npm install
+- gem install rails
+- gem install bundler
 
 ### Usage
 
