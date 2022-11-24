@@ -136,4 +136,14 @@ hr {
   margin: 0 auto;
   width: 40%;
 }
+
+.message {
+  padding: 5px;
+  margin: 3px;
+  color: #fff;
+}
+
+.user-list {
+  color: #fff;
+}
 /* stylelint-enable */
