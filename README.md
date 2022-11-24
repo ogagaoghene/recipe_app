@@ -44,7 +44,10 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Recipe-App is built with Ruby on Rails, PostgresSQL, Bootstrap 
+> Recipe-App is built with 
+- Ruby on Rails
+- PostgresSQL
+- Bootstrap 
 
 <details>
   <summary>Client</summary>
@@ -108,7 +111,8 @@ In order to run this project you need:
 - Ruby on Rails 
 - PostgreSQL
 - Bootstrap 
-- npm
+- npm install 
+- rails server
 
 ### Setup
 
@@ -116,6 +120,7 @@ Clone this repository to your desired folder:
 - git clone https://github.com/ogagaoghene/recipe_app
 - cd recipe_app
 - db:migrate 
+- rails server
 
 ### Install
 
