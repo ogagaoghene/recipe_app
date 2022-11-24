@@ -1,10 +1,13 @@
 <table class="table table-striped table-active">
+  <thead>
     <tr>
       <th>Food</th>
       <th>Quantity</th>
       <th>Value</th>
       <th>Actions</th>
     </tr>
+  </thead>
+  <tbody>
     <% @recipe.all_ingredients.each do |ingredient| %>
       <tr>
         <td><%= ingredient.food.name %></td>
@@ -21,4 +24,5 @@
         </td>
       <tr>
     <% end %>
+    </tbody>
   </table>

@@ -21,6 +21,7 @@ body {
 }
 
 .devise__grid_container {
+  border: 1px solid #eee;
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 16px;
@@ -41,6 +42,18 @@ body {
 }
 
 .devise__grid_container .sign_up {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
+.devise__grid_container .add_food {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
+.devise__grid_container .add_recipe {
   margin: 0 auto;
   text-align: center;
   width: 80%;
@@ -72,6 +85,16 @@ body {
   padding: 10px;
   width: 80%;
 }
+
+.devise__grid_container .bttn_success {
+  background-color:  #0275d8;
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  border: 0 solid;
+  color: #fff;
+}
+
 
 .devise__grid_container .shared_links {
   margin-top: 5px;
