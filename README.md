@@ -32,7 +32,7 @@ git clone https://github.com/ogagaoghene/recipe_app
 👤 **Esi Ogagaoghen**
 
 - GitHub: [ogagaoghene](https://github.com/ogagaoghene)
-- LinkedIn: [@looh16](https://www.linkedin.com/in/ogagaoghene-esi) 
+- LinkedIn: [ogagaoghene-esi](https://www.linkedin.com/in/ogagaoghene-esi) 
 
 ## 🤝 Contributing
 
