@@ -47,7 +47,7 @@
 > Recipe-App is built with 
 - Ruby on Rails
 - PostgresSQL
-- Bootstrap 
+- Bootstrap CSS framework
 
 <details>
   <summary>Client</summary>
@@ -103,6 +103,19 @@
 To get a local copy up and running, follow these steps.
 - git clone https://github.com/ogagaoghene/recipe_app
 - cd recipe_app
+- Run `bundle install` to install all the required dependancies.
+- Run `rails db:create` and `rails db:migrate` to create & migrate records to   the database.
+- Run `rails s` to spin up a development server.
+
+## Errors
+
+If you encounter any errors, run the following commands.
+- Run `rails db:migrate:reset` to drop, create and migrate a new database.
+Alternatively, run the following commands:
+- rails db:drop:all 
+- rails db:create 
+- rails db:migrate
+- Run `rubocop && rubocop -A` to check for and fix code errors.
 
 ### Prerequisites
 
@@ -115,11 +128,16 @@ In order to run this project you need:
 - rails server
 
 ### Setup
+- Install and setup PostgreSQL
+- Install and setup Ruby On Rails 
+- Setup Bootstrap CSS framework
 
 Clone this repository to your desired folder:
 - git clone https://github.com/ogagaoghene/recipe_app
 - cd recipe_app
-- rails server
+- Run `bundle install` to install all the required dependancies.
+- Run `rails db:create` and `rails db:migrate` to create & migrate records to DB
+- Run `rails s` to spin up a development server.
 
 ### Install
 
@@ -141,7 +159,9 @@ To run the project, execute the following command:
 ### Run tests
 
 To run tests, run the following command:
-- bundle exec rspec spec/feature/test_spec.rb
+- `bundle exec rspec` will run all the tests.
+- Also, you can run `bundle exec rspec spec/` to run specific tests.
+- You can also run `RAILS_ENV=test rspec spec/` to run the tests in test mode.
 
 ### Deployment
 
