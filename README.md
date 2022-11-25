@@ -119,7 +119,6 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 - git clone https://github.com/ogagaoghene/recipe_app
 - cd recipe_app
-- db:migrate 
 - rails server
 
 ### Install
