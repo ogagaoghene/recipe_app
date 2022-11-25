@@ -159,9 +159,7 @@ To run the project, execute the following command:
 ### Run tests
 
 To run tests, run the following command:
-- `bundle exec rspec` will run all the tests.
-- Also, you can run `bundle exec rspec spec/` to run specific tests.
-- You can also run `RAILS_ENV=test rspec spec/` to run the tests in test mode.
+- bundle exec rspec spec/tests/
 
 ### Deployment
 
