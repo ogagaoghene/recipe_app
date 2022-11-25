@@ -1,0 +1,22 @@
+<section class="grid__container">
+  <h2>Add Food</h2>
+  <div class="add_food">
+  <%= form_with model: @food, method: :post, scope: :new_food do |f| %>
+    <div class="field">
+      <%= f.text_field :name, placeholder: "Name", class: 'txt_input' %>
+    </div>
+    <div class="field">
+      <%= f.number_field :price, placeholder: "Price", class: 'txt_input' %>
+    </div>
+    <div class="field">
+      <%= f.number_field :quantity, placeholder: "Quantity", class: 'txt_input'  %>
+    </div>
+    <div class="field">
+      <%= f.text_field :measurement_unit, placeholder: "Measurement Unit", class: 'txt_input'  %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Submit', class: 'bttn_success' %>
+    </div>
+   <% end %>
+  </div>
+</section>

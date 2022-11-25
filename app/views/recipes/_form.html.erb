@@ -1,0 +1,32 @@
+<section class="grid__container">
+  <%= form_with model: @recipe, method: :post, scope: :new_recipe do |f| %>
+    <h2>Add Recipe</h2>
+    <div class="add_recipe">
+    <div>
+      <%= f.text_field :name, placeholder: "Name", class: 'txt_input' %>
+    </div>
+    <div>
+      <%= f.text_area :description, placeholder: "Description", class: 'txt_input' %>
+    </div>
+    <div>
+      <%= f.text_field :preparation_time, placeholder: "Preparation time [HH:MM:SS]", class: 'txt_input' %>
+    </div>
+    <div>
+      <%= f.text_field :cooking_time, placeholder: "Cooking time", class: 'txt_input'%>
+    </div>
+    <div>
+      <span>Is this recipe public?</span>
+      <div>
+        <%= f.label :public, 'Yes' %>
+        <%= f.radio_button :public, true %>
+      </div>
+      <div>
+        <%= f.label :public, 'No' %>
+        <%= f.radio_button :public, false %>
+      </div>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Submit', class: 'bttn_success' %>
+  </div>
+  <% end %>
+</section>

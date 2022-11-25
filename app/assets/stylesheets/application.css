@@ -1,15 +1,149 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+ /* stylelint-disable */
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Avenir;
+  font-size: 1rem;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 16px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.devise__grid_container {
+  border: 1px solid #eee;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 16px;
+  width: 50%;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.devise__grid_container h2 {
+  text-align: center;
+  padding: 10px;
+}
+
+.devise__grid_container .sign_in {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
+.devise__grid_container .sign_up {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
+.devise__grid_container .add_food {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
+.devise__grid_container .add_recipe {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+}
+
+.devise__grid_container .txt_input {
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+}
+
+.devise__grid_container .chk_box {
+  margin-top: 10px;
+  margin-left: 50px;
+  font-size: 12px;
+  width: 80%;
+  text-align: left;
+  padding: 5px;
+}
+
+.devise__grid_container .bttn_login {
+  margin-top: 5px;
+  padding: 10px;
+  width: 80%;
+}
+
+.devise__grid_container .bttn_signup {
+  margin-top: 5px;
+  padding: 10px;
+  width: 80%;
+}
+
+.devise__grid_container .bttn_success {
+  background-color:  #0275d8;
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  border: 0 solid;
+  color: #fff;
+}
+
+
+.devise__grid_container .shared_links {
+  margin-top: 5px;
+  padding: 5px;
+  width: 80%;
+  font-size: 13px;
+  width: 80%;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+.nav_li {
+  text-decoration: none;
+  display: block;
+  color: white;
+  padding: 2px;
+}
+
+.nav_ul {
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.logo {
+  border-radius: 2px;
+  padding: 2px;
+  margin: 3px;
+  font-size: 34px;
+  font-family: Avenir;
+  color: #fff;
+  width: 200px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+hr {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.message {
+  padding: 5px;
+  margin: 3px;
+  color: #fff;
+}
+
+.user-list {
+  color: #fff;
+}
+/* stylelint-enable */
